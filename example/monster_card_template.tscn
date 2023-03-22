@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgqntvatntd3p"]
+
+[ext_resource type="Script" path="res://addons/BGS-Godot/BGENode.gd" id="1_2eho4"]
+
+[node name="Monster Card Template" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_2eho4")
