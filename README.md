@@ -42,7 +42,7 @@ As of now the Codebase is very rough, I implemented barebones functionality duri
 
 ## 💻 Installation <a name = "Installation"></a>
 
-**Drag & Drop**  the contents of the "addons"-folder into your projects "addons"-folder (u know the drill)
+**Drag & Drop**  the contents of the "addons"-folder into your projects "addons"-folder and activate it in the project settings (u know the drill)
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 

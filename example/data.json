@@ -1,0 +1,58 @@
+[
+    {
+      "Amount": 5,
+      "Name": "Tom",
+      "Price": 2,
+      "Type": "Slime",
+      "Text": "Make a player discard 2 Cards"
+    },
+    {
+      "Amount": 5,
+      "Name": "Max",
+      "Price": 2,
+      "Type": "Slime",
+      "Text": "Draw 2 Cards"
+    },
+    {
+      "Amount": 4,
+      "Name": "Steven",
+      "Price": 3,
+      "Type": "Guy",
+      "Text": "Gain 5 Gold"
+    },
+    {
+      "Amount": 4,
+      "Name": "Marcus",
+      "Price": 3,
+      "Type": "Guy",
+      "Text": "No idea Bro"
+    },
+    {
+      "Amount": 2,
+      "Name": "Bouba",
+      "Price": 1,
+      "Type": "Abstract",
+      "Text": "Round Fellow"
+    },
+    {
+      "Amount": 2,
+      "Name": "Kiki",
+      "Price": 1,
+      "Type": "Abstract",
+      "Text": "Keep Away from this one"
+    },
+    {
+      "Amount": 1,
+      "Name": "Frog (Giant)",
+      "Price": 5,
+      "Type": "Animal",
+      "Text": "Love em"
+    },
+    {
+      "Amount": 1,
+      "Name": "Capitalism",
+      "Price": 10000,
+      "Type": "Final Boss",
+      "Text": "Really fuck this Guy"
+    }
+  ]
