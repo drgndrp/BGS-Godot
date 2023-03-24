@@ -1,22 +1,20 @@
 @tool
 extends Control
+class_name BGENode
 
 @export var Data : BGEData
 
 @export var ID : int :
-	set(v):
-		if v<1: v=1
-		if v>Data.Size: v=Data.Size
-		ID = v
-		print("test")
-		var data = Data.getData(ID-1)
+	set(id):
+		if(!is_inside_tree()): await(ready)
+		if id<1: id=1
+		if id>Data.Size: id=Data.Size
+		var data = Data.getData(id-1)
 		for d in data:
 			match d.Type:
 				"Text":
-					print("Text")
 					(get_node(d.Node_Path) as Label).text = d.Value
 				"Integer":
-					print("int")
 					(get_node(d.Node_Path) as Label).text = d.Value
 				"Richt Text":
 					(get_node(d.Node_Path) as RichTextLabel).text = d.Value
@@ -25,5 +23,7 @@ extends Control
 				"Image": # TODO: Implement
 					pass
 		(get_node(Data.Size_Label) as Label).text = str(Data.Size)
-		(get_node(Data.ID_Label) as Label).text = str(ID)
+		(get_node(Data.ID_Label) as Label).text = str(id)
+		print(str(id)+" done")
+		ID = id
 

@@ -26,8 +26,7 @@
 - [Showcase](#showcase)
 - [Installation](#Installation)
 - [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
+- [TODO](TODO.md)
 - [Authors](#authors)
 
 ## 🧐 Introduction / Disclaimer <a name = "about"></a>

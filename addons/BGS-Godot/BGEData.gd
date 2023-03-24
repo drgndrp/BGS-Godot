@@ -56,15 +56,12 @@ var ID : int
 		return s
 
 func CardFieldChanged():
-	print("hey")
 	for k in Data_Mappings:
 		var m = Data_Mappings[k] as BGEField
 		var SMap : Dictionary = m.Symbol_Mapping 
 		match m.Type:
 			"Symbol":
 				for d in Data:
-					print(d[k])
-					print(SMap.find_key([d[k]]))
 					if(!SMap.has(d[k])): 
 						SMap[str(d[k])] = CompressedTexture2D.new()
 
@@ -78,5 +75,5 @@ func getData(id) -> Array:
 		var CCard = Card[k]
 		if cf.Type == "Symbol": CCard = (cf.Symbol_Mapping[Card[k]] as CompressedTexture2D).resource_path
 		arr.append({"Type" : cf.Type, "Node_Path" : cf.Corresponding_Node, "Value" : str(CCard)})
-		print(k + " (" + cf.Type + " @ $" + str(cf.Corresponding_Node) + ") = " + str(Card[k]))
+		#print(k + " (" + cf.Type + " @ $" + str(cf.Corresponding_Node) + ") = " + str(Card[k]))
 	return arr

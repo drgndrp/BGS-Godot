@@ -1,8 +1,9 @@
 # TODO - Board Game Studio Godot
 
 ### Core Functionality
-- [ ] Sheet Node
+- [x] Sheet Node
 - [ ] BGE Field for Templates
+- [ ] Symbols in Rich Text Object
 - [ ] Export
 
 ### Additions

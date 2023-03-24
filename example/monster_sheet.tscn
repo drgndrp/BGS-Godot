@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxt20bael4ha3"]
+
+[ext_resource type="Script" path="res://addons/BGS-Godot/BGESheet.gd" id="1_phwwu"]
+[ext_resource type="Resource" uid="uid://dv12bb5thj43p" path="res://example/Monster_Data.tres" id="2_a0yvq"]
+[ext_resource type="PackedScene" uid="uid://cgqntvatntd3p" path="res://example/monster_card_template.tscn" id="3_xx7dd"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Monster Card Template" parent="." instance=ExtResource("3_xx7dd")]
+offset_left = -540.0
+offset_top = 148.0
+offset_right = -240.0
+offset_bottom = 548.0
+ID = 24
+
+[node name="Board Game Element - Sheet" type="HFlowContainer" parent="."]
+layout_mode = 0
+offset_right = 2399.0
+offset_bottom = 1921.0
+script = ExtResource("1_phwwu")
+Data = ExtResource("2_a0yvq")
+Template = NodePath("../Monster Card Template")
