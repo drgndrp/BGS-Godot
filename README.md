@@ -31,9 +31,9 @@
 
 ## 🧐 Introduction / Disclaimer <a name = "about"></a>
 
-BGS Godot or Board Game Studio Godot is an attempt to transform Godot into a Development tool for Board Games, be virtual or physical. You can use the Editor to Design Board Game Element Templates which can be intuitively and code free connected to your database, and then used to generate spritesheets for quick prototyping or maybe even production.
+*BGS Godot*, or "Board Game Studio - Godot", is an attempt to transform Godot into a development tool for board games, whether virtual or physical. You can use the editor to design board game element templates that can be intuitively and code-free connected to your database, and then used to generate sprite sheets for quick prototyping or even production.
 
-As of now the Codebase is very rough, I implemented barebones functionality during one 12 hour session as a proof of concept. I'm searching for collaborators and testers. See more details in my showcase below.
+As of now, the codebase is very rough. I implemented barebones functionality during a 12-hour session as a proof of concept. I'm searching for collaborators and testers. Please see more details in my showcase below.
 
 ## 🏁 Getting Started <a name = "Showcase"></a>
 
