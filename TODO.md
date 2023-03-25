@@ -3,7 +3,7 @@
 ### Core Functionality
 - [x] Sheet Node
 - [ ] BGE Field for Templates
-- [ ] Symbols in Rich Text Object
+- [x] Symbols in Rich Text Object
 - [ ] Export
 
 ### Additions

@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="BGEData" load_steps=18 format=3 uid="uid://dv12bb5thj43p"]
+[gd_resource type="Resource" script_class="BGEData" load_steps=19 format=3 uid="uid://dv12bb5thj43p"]
 
 [ext_resource type="Script" path="res://addons/BGS-Godot/BGEField.gd" id="1_s1e5c"]
 [ext_resource type="Script" path="res://addons/BGS-Godot/BGEData.gd" id="2_g6fyj"]
 [ext_resource type="Texture2D" uid="uid://c5271iwfmsgnk" path="res://example/symbols/abstract.svg" id="2_opr1a"]
+[ext_resource type="Texture2D" uid="uid://c4vqo2xk5mpb3" path="res://example/symbols/crown-coin.svg" id="2_r032k"]
 [ext_resource type="Texture2D" uid="uid://bda1rh0jlf35i" path="res://example/symbols/frog.svg" id="3_ngf4f"]
 [ext_resource type="Texture2D" uid="uid://d3f7uinl8vpg2" path="res://example/symbols/money-stack.svg" id="4_nbsa5"]
 [ext_resource type="Texture2D" uid="uid://csy61heey0yld" path="res://example/symbols/character.svg" id="5_qdg0q"]
@@ -42,9 +43,10 @@ Symbol_Mapping = {
 
 [sub_resource type="Resource" id="Resource_6djp6"]
 script = ExtResource("1_s1e5c")
-Type = "Richt Text"
+Type = "Text"
 Corresponding_Node = NodePath("Layout/Text Box/Text")
 Symbol_Mapping = {
+"test": ExtResource("2_r032k"),
 "unknown": SubResource("CompressedTexture2D_4vjre")
 }
 
@@ -70,7 +72,7 @@ Data = [{
 "Amount": 5.0,
 "Name": "Tom",
 "Price": 2.0,
-"Text": "Make a player discard 2 Cards",
+"Text": "Make a player discard 2 Cards %test%",
 "Type": "Slime"
 }, {
 "Amount": 5.0,

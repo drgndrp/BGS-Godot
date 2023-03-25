@@ -12,8 +12,9 @@ class_name BGEData
 					.get_as_text()
 					)
 		for key in Data[0]:
-			Data_Mappings[key] = BGEField.new()
-			(Data_Mappings[key] as BGEField).changed.connect(CardFieldChanged)
+			if(!Data_Mappings.has(key)):
+				Data_Mappings[key] = BGEField.new()
+				(Data_Mappings[key] as BGEField).changed.connect(CardFieldChanged)
 		notify_property_list_changed()
 @export var Data : Array
 @export_group("2. Map Data")
@@ -59,21 +60,30 @@ func CardFieldChanged():
 	for k in Data_Mappings:
 		var m = Data_Mappings[k] as BGEField
 		var SMap : Dictionary = m.Symbol_Mapping 
+		#print(m.Type)
 		match m.Type:
 			"Symbol":
 				for d in Data:
 					if(!SMap.has(d[k])): 
 						SMap[str(d[k])] = CompressedTexture2D.new()
+			"Rich Text":
+				var regex = RegEx.create_from_string("%(.*?)%")
+				for d in Data:
+					print(str(d[k]))
+					for t in regex.search_all(d[k]):
+						if(!SMap.has((t as RegExMatch).strings[1])): 
+							SMap[(t as RegExMatch).strings[1]] = CompressedTexture2D.new()
+						
 
-func getData(id) -> Array:
+func getData(id) -> Dictionary:
 	CardFieldChanged()
 	ID = id
-	var arr : Array
-	var Card = Data[BGESet[id]]
-	for k in Card:
-		var cf = (Data_Mappings[k] as BGEField)
-		var CCard = Card[k]
-		if cf.Type == "Symbol": CCard = (cf.Symbol_Mapping[Card[k]] as CompressedTexture2D).resource_path
-		arr.append({"Type" : cf.Type, "Node_Path" : cf.Corresponding_Node, "Value" : str(CCard)})
-		#print(k + " (" + cf.Type + " @ $" + str(cf.Corresponding_Node) + ") = " + str(Card[k]))
-	return arr
+	#var arr : Array
+	return Data[BGESet[id]]
+	# for k in Card:
+	# 	var cf = (Data_Mappings[k] as BGEField)
+	# 	var CCard = Card[k]
+	# 	if cf.Type == "Symbol": CCard = (cf.Symbol_Mapping[Card[k]] as CompressedTexture2D).resource_path
+	# 	arr.append({"Type" : cf.Type, "Node_Path" : cf.Corresponding_Node, "Value" : str(CCard)})
+	# 	#print(k + " (" + cf.Type + " @ $" + str(cf.Corresponding_Node) + ") = " + str(Card[k]))
+	# return arr

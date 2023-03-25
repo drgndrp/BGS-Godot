@@ -17,7 +17,7 @@ offset_left = -540.0
 offset_top = 148.0
 offset_right = -240.0
 offset_bottom = 548.0
-ID = 24
+ID = 1
 
 [node name="Board Game Element - Sheet" type="HFlowContainer" parent="."]
 layout_mode = 0

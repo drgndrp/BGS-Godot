@@ -3,7 +3,7 @@ extends Resource
 class_name BGEField
 
 @export_group("Field Options")
-@export_enum("Amount","Integer","Text","Richt Text","Symbol","Image") var Type : String:
+@export_enum("Amount","Integer","Text","Rich Text","Symbol","Image") var Type : String:
 	set(v):
 		Type = v
 		emit_changed()
