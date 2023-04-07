@@ -15,7 +15,6 @@ extends HFlowContainer
 
 		if !templ.is_empty():
 			for i in range(1,Data.Size+1):
-				#get_node(templ).set("ID",i)
 				var card : BGENode = get_node(templ).duplicate()
 				add_child(card)
 				card.set("ID",i)

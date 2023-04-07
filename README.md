@@ -46,6 +46,7 @@ As of now, the codebase is very rough. I implemented barebones functionality dur
 ## ⛏️ Built Using <a name = "built_using"></a>
 
 - [Godot](https://godotengine.org/)
+- [VSCode](https://code.visualstudio.com/)
 
 ## ✍️ Authors <a name = "authors"></a>
 
