@@ -10,9 +10,10 @@ class_name BGENode
 	set(id):
 		# wait for object to be instanced
 		if(!is_inside_tree()): await(ready)
-
+		print(id)
 		# Get Element-Dataset from BGEData object
-		id = clamp(id,1,Data.size)
+		id = clamp(id,1,Data.Size)
+		print(id)
 		var data = Data.getData(id-1)
 		
 		#Fill nodes with Data
@@ -23,7 +24,9 @@ class_name BGENode
 				var cn = get_node(field.Corresponding_Node)
 				match field.Type:
 					"Text":
-						var fsize = (cn as RichTextLabel).get_theme_default_font().get_height()
+						var fsize = 10
+						if cn is RichTextLabel:
+							fsize = (cn as RichTextLabel).get_theme_default_font().get_height()
 						var text = data[d]
 						for k in field.Symbol_Mapping:
 							text = text.replace("%"+k+"%","[img height="+str(fsize)+"]"+field.Symbol_Mapping[k].resource_path+"[/img]")
