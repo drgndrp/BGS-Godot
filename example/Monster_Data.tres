@@ -1,78 +1,82 @@
-[gd_resource type="Resource" script_class="BGEData" load_steps=19 format=3 uid="uid://dv12bb5thj43p"]
+[gd_resource type="Resource" script_class="BGEData" load_steps=20 format=3 uid="uid://dv12bb5thj43p"]
 
-[ext_resource type="Script" path="res://addons/BGS-Godot/BGEField.gd" id="1_s1e5c"]
-[ext_resource type="Script" path="res://addons/BGS-Godot/BGEData.gd" id="2_g6fyj"]
-[ext_resource type="Texture2D" uid="uid://c5271iwfmsgnk" path="res://example/symbols/abstract.svg" id="2_opr1a"]
-[ext_resource type="Texture2D" uid="uid://c4vqo2xk5mpb3" path="res://example/symbols/crown-coin.svg" id="2_r032k"]
-[ext_resource type="Texture2D" uid="uid://bda1rh0jlf35i" path="res://example/symbols/frog.svg" id="3_ngf4f"]
-[ext_resource type="Texture2D" uid="uid://d3f7uinl8vpg2" path="res://example/symbols/money-stack.svg" id="4_nbsa5"]
-[ext_resource type="Texture2D" uid="uid://csy61heey0yld" path="res://example/symbols/character.svg" id="5_qdg0q"]
-[ext_resource type="Texture2D" uid="uid://25d0mliptqrx" path="res://example/symbols/slime.svg" id="6_lpy46"]
+[ext_resource type="Script" path="res://addons/BGS-Godot/BGEField.gd" id="1_0jyv8"]
+[ext_resource type="Texture2D" uid="uid://c4vqo2xk5mpb3" path="res://example/symbols/crown-coin.svg" id="2_aepys"]
+[ext_resource type="Texture2D" uid="uid://d3f7uinl8vpg2" path="res://example/symbols/money-stack.svg" id="3_rh27e"]
+[ext_resource type="Texture2D" uid="uid://csy61heey0yld" path="res://example/symbols/character.svg" id="4_sacnv"]
+[ext_resource type="Texture2D" uid="uid://bdk846k4bdbv2" path="res://BGS-Godot-LogoTemp.svg" id="5_cs556"]
+[ext_resource type="Texture2D" uid="uid://c5271iwfmsgnk" path="res://example/symbols/abstract.svg" id="6_ruj2n"]
+[ext_resource type="Texture2D" uid="uid://bda1rh0jlf35i" path="res://example/symbols/frog.svg" id="7_5i4cg"]
+[ext_resource type="Texture2D" uid="uid://25d0mliptqrx" path="res://example/symbols/slime.svg" id="8_kevnx"]
+[ext_resource type="Script" path="res://addons/BGS-Godot/BGEData.gd" id="9_uqxs5"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bpxpf"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_y8xoh"]
 
-[sub_resource type="Resource" id="Resource_0488h"]
-script = ExtResource("1_s1e5c")
+[sub_resource type="Resource" id="Resource_lr42q"]
+script = ExtResource("1_0jyv8")
 Type = "Amount"
 Corresponding_Node = NodePath("")
 Symbol_Mapping = {
-"unknown": SubResource("CompressedTexture2D_bpxpf")
+"unknown": SubResource("CompressedTexture2D_y8xoh")
 }
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_p46su"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c1m1p"]
 
-[sub_resource type="Resource" id="Resource_u2fs0"]
-script = ExtResource("1_s1e5c")
+[sub_resource type="Resource" id="Resource_c356u"]
+script = ExtResource("1_0jyv8")
 Type = "Text"
 Corresponding_Node = NodePath("Layout/Top/Name")
 Symbol_Mapping = {
-"unknown": SubResource("CompressedTexture2D_p46su")
+"unknown": SubResource("CompressedTexture2D_c1m1p")
 }
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o83qr"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jxsuh"]
 
-[sub_resource type="Resource" id="Resource_aoqt6"]
-script = ExtResource("1_s1e5c")
+[sub_resource type="Resource" id="Resource_pkpf5"]
+script = ExtResource("1_0jyv8")
 Type = "Integer"
 Corresponding_Node = NodePath("Layout/Top/Value")
 Symbol_Mapping = {
-"unknown": SubResource("CompressedTexture2D_o83qr")
+"unknown": SubResource("CompressedTexture2D_jxsuh")
 }
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4vjre"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1rklk"]
 
-[sub_resource type="Resource" id="Resource_6djp6"]
-script = ExtResource("1_s1e5c")
+[sub_resource type="Resource" id="Resource_f0vlv"]
+script = ExtResource("1_0jyv8")
 Type = "Text"
 Corresponding_Node = NodePath("Layout/Text Box/Text")
 Symbol_Mapping = {
-"test": ExtResource("2_r032k"),
-"unknown": SubResource("CompressedTexture2D_4vjre")
+"Coin": ExtResource("2_aepys"),
+"Gold": ExtResource("3_rh27e"),
+"Man": ExtResource("4_sacnv"),
+"cards": ExtResource("5_cs556"),
+"unknown": SubResource("CompressedTexture2D_1rklk")
 }
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i0fw1"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_r0eqg"]
 
-[sub_resource type="Resource" id="Resource_14bvd"]
-script = ExtResource("1_s1e5c")
+[sub_resource type="Resource" id="Resource_4k22g"]
+script = ExtResource("1_0jyv8")
 Type = "Symbol"
 Corresponding_Node = NodePath("Layout/Image")
 Symbol_Mapping = {
-"Abstract": ExtResource("2_opr1a"),
-"Animal": ExtResource("3_ngf4f"),
-"Final Boss": ExtResource("4_nbsa5"),
-"Guy": ExtResource("5_qdg0q"),
-"Slime": ExtResource("6_lpy46"),
-"unknown": SubResource("CompressedTexture2D_i0fw1")
+"Abstract": ExtResource("6_ruj2n"),
+"Animal": ExtResource("7_5i4cg"),
+"Final Boss": ExtResource("3_rh27e"),
+"Guy": ExtResource("4_sacnv"),
+"Slime": ExtResource("8_kevnx"),
+"unknown": SubResource("CompressedTexture2D_r0eqg")
 }
 
 [resource]
-script = ExtResource("2_g6fyj")
-Data_Path = "C:/Users/pittw/Desktop/PeterData/projects/Godot/BGS-Godot/example/data.json"
+script = ExtResource("9_uqxs5")
+Data_Path = "c:/Users/pittw/BGS-Godot/example/data.json"
 Data = [{
 "Amount": 5.0,
 "Name": "Tom",
 "Price": 2.0,
-"Text": "Make a player discard 2 Cards %test%",
+"Text": "Make a player discard 2 Cards",
 "Type": "Slime"
 }, {
 "Amount": 5.0,
@@ -118,16 +122,14 @@ Data = [{
 "Type": "Final Boss"
 }]
 Data_Mappings = {
-"Amount": SubResource("Resource_0488h"),
-"Name": SubResource("Resource_u2fs0"),
-"Price": SubResource("Resource_aoqt6"),
-"Text": SubResource("Resource_6djp6"),
-"Type": SubResource("Resource_14bvd")
+"Amount": SubResource("Resource_lr42q"),
+"Name": SubResource("Resource_c356u"),
+"Price": SubResource("Resource_pkpf5"),
+"Text": SubResource("Resource_f0vlv"),
+"Type": SubResource("Resource_4k22g")
 }
 Size_Label = NodePath("Layout/Bottom/Size")
 ID_Label = NodePath("Layout/Bottom/ID")
-BGESet = [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 5, 5, 6, 7]
 Amount_Field = "Amount"
+BGESet = [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 5, 5, 6, 7]
 Size = 24
-metadata/_editor_prop_ptr_Deck_Size = NodePath("Layout/Bottom/Size")
-metadata/_editor_prop_ptr_Deck_ID = NodePath("Layout/Bottom/ID")

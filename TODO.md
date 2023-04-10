@@ -2,10 +2,13 @@
 
 ### Core Functionality
 - [x] Sheet Node
-- [ ] BGE Field for Templates
 - [x] Symbols in Rich Text Object
 - [ ] Export
+- [ ] Card Back
 
 ### Additions
 - [x] Example
+- [ ] Nicer Example
+- [ ] Showcase
+- [ ] Automation
 - [ ] Add Dokumentation

@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://coq4l6van5b10"]
+
+[ext_resource type="Script" path="res://addons/BGS-Godot/BGESheet.gd" id="1_22l68"]
+[ext_resource type="Script" path="res://addons/BGS-Godot/BGESheetViewer.gd" id="1_e1036"]
+[ext_resource type="Texture2D" uid="uid://sxceacxmc0oi" path="res://addons/BGS-Godot/export.svg" id="2_r6eoo"]
+
+[node name="BGESheetViewer" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_e1036")
+
+[node name="Buttons" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 62)
+layout_mode = 2
+
+[node name="Export" type="MenuButton" parent="Buttons"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+tooltip_text = "Export"
+icon = ExtResource("2_r6eoo")
+icon_alignment = 1
+expand_icon = true
+item_count = 2
+popup/item_0/text = "Sheet"
+popup/item_0/id = 0
+popup/item_1/text = "Seperate Files"
+popup/item_1/id = 1
+
+[node name="Scroll" type="ScrollContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Sheet" type="HFlowContainer" parent="Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_22l68")
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]

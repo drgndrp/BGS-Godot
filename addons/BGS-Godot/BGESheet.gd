@@ -10,7 +10,6 @@ extends HFlowContainer
 		if(!is_inside_tree()): await(ready)
 
 		for n in get_children():
-			remove_child(n)
 			n.queue_free()
 
 		if !templ.is_empty():
