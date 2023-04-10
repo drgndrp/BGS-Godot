@@ -46,4 +46,5 @@ func _on_export_pressed(id):
 					node.ID = i
 					await RenderingServer.frame_post_draw
 					vp.get_image().save_png("export/"+node.name+"_"+str(i)+".png")
-				window.queue_free()
+		
+		window.queue_free()
