@@ -2,6 +2,7 @@
 extends Resource
 class_name BGEData
 
+
 @export_group("1. Import Data") 
 ## Set the the Path to the source File.
 ## [b]For now the data must be imported from a JSON-file.[/b]

@@ -40,5 +40,5 @@ func _get_plugin_name():
 	return "BGS - Sheet Viewer"
 
 func _get_plugin_icon():
-	var t = load("res://addons/BGS-Godot/card.svg") as Texture2D
+	var t = load("res://addons/BGS-Godot/icons/card.svg") as Texture2D
 	return t

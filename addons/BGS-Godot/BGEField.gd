@@ -2,8 +2,6 @@
 extends Resource
 class_name BGEField
 
-@export_group("Field Options")
-
 ## The Type of Field.
 @export_enum("Amount","Text","Symbol","Image") var Type : String:
 	set(v):

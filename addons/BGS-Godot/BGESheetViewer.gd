@@ -17,8 +17,14 @@ func _process(delta):
 func _on_visibility_changed():
 	if visible:
 		if edited_scene_root is BGENode:
-			$"Scroll/Sheet".set("Data",edited_scene_root.Data)
-			$"Scroll/Sheet".set("Template",edited_scene_root.get_path())
+			#$"Scroll/Sheet".set("Data",edited_scene_root.Data)
+			#$"Scroll/Sheet".set("Template",edited_scene_root.get_path())
+			for n in $"Scroll/Sheet".get_children():
+				n.queue_free()
+			for i in range(1,edited_scene_root.Data.Size+1):
+				var card : BGENode = edited_scene_root.duplicate()
+				card.set("ID",i)
+				$"Scroll/Sheet".add_child(card)
 
 func _on_export_pressed(id):
 	if edited_scene_root is BGENode:

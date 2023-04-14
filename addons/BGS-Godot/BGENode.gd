@@ -23,16 +23,14 @@ class_name BGENode
 			if(has_node(field.Corresponding_Node)):
 				var cn = get_node(field.Corresponding_Node)
 				match field.Type:
-					"Text":
+					"Text","Amount":
 						var fsize = 10
 						if cn is RichTextLabel:
 							fsize = (cn as RichTextLabel).get_theme_default_font().get_height()
-						var text = data[d]
+						var text = str(data[d])
 						for k in field.Symbol_Mapping:
 							text = text.replace("%"+k+"%","[img height="+str(fsize)+"]"+field.Symbol_Mapping[k].resource_path+"[/img]")
 						cn.text = text
-					"Integer":
-						cn.text = str(data[d])
 					"Symbol":
 						(cn as TextureRect).texture = load(field.Symbol_Mapping[data[d]].resource_path)
 					"Image": # TODO: Implement
